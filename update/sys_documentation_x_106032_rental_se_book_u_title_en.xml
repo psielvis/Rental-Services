@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="u_title" label="Title" language="en" table="x_106032_rental_se_book">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_title</element>
+            <help/>
+            <hint/>
+            <label>Title</label>
+            <language>en</language>
+            <name>x_106032_rental_se_book</name>
+            <plural>Titles</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-01-07 15:33:10</sys_created_on>
+            <sys_id>d5a4066adb322300dbe37b1ebf9619df</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Title</sys_name>
+            <sys_package display_value="Rental Services" source="x_106032_rental_se">346306a6db322300dbe37b1ebf9619ee</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Rental Services">346306a6db322300dbe37b1ebf9619ee</sys_scope>
+            <sys_update_name>sys_documentation_x_106032_rental_se_book_u_title_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-01-07 15:33:10</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

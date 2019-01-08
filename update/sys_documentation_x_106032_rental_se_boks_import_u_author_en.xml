@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="u_author" label="AUTHOR" language="en" table="x_106032_rental_se_boks_import">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_author</element>
+            <help/>
+            <hint/>
+            <label>AUTHOR</label>
+            <language>en</language>
+            <name>x_106032_rental_se_boks_import</name>
+            <plural>AUTHORs</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-01-07 16:10:15</sys_created_on>
+            <sys_id>682d8aa2db722300dbe37b1ebf961920</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>AUTHOR</sys_name>
+            <sys_package display_value="Rental Services" source="x_106032_rental_se">346306a6db322300dbe37b1ebf9619ee</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Rental Services">346306a6db322300dbe37b1ebf9619ee</sys_scope>
+            <sys_update_name>sys_documentation_x_106032_rental_se_boks_import_u_author_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-01-07 16:10:15</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

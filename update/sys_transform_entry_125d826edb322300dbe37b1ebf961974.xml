@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_entry">
+    <sys_transform_entry action="INSERT_OR_UPDATE">
+        <choice_action>ignore</choice_action>
+        <coalesce>false</coalesce>
+        <coalesce_case_sensitive>false</coalesce_case_sensitive>
+        <coalesce_empty_fields>false</coalesce_empty_fields>
+        <date_format>yyyy-MM-dd HH:mm:ss</date_format>
+        <map display_value="books import">eb2d06eedb322300dbe37b1ebf9619db</map>
+        <reference_value_field/>
+        <source_field>[Script]</source_field>
+        <source_script><![CDATA[answer = (function transformEntry(source) {
+var outcome = source.u_category.replace(/[-]/g, " ");
+	// Add your code here
+	return outcome; // return the value to be put into the target field
+
+})(source);]]></source_script>
+        <source_table>x_106032_rental_se_boks_import</source_table>
+        <sys_class_name>sys_transform_entry</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-01-07 16:11:12</sys_created_on>
+        <sys_id>125d826edb322300dbe37b1ebf961974</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>[Script]</sys_name>
+        <sys_package display_value="Rental Services" source="x_106032_rental_se">346306a6db322300dbe37b1ebf9619ee</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Rental Services">346306a6db322300dbe37b1ebf9619ee</sys_scope>
+        <sys_update_name>sys_transform_entry_125d826edb322300dbe37b1ebf961974</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-01-08 11:05:08</sys_updated_on>
+        <target_field>u_category</target_field>
+        <target_table>x_106032_rental_se_book</target_table>
+        <use_source_script>true</use_source_script>
+    </sys_transform_entry>
+</record_update>

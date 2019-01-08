@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Book" max_length="40" name="x_106032_rental_se_book" type="collection">
+        <element label="Author" max_length="250" name="u_author" type="string"/>
+        <element choice="3" label="Binding" mandatory="true" max_length="250" name="u_binding" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Audio Cassette" sequence="10" value="Audio_Cassette"/>
+                <element inactive_on_update="false" label="Audio CD" sequence="20" value="Audio_CD"/>
+                <element inactive_on_update="false" label="Board" sequence="30" value="Board"/>
+                <element inactive_on_update="false" label="Boxed Set" sequence="40" value="Boxed_Set"/>
+                <element inactive_on_update="false" label="CD-ROM" sequence="50" value="CD_ROM"/>
+                <element inactive_on_update="false" label="Hard Cover" sequence="60" value="Hard_Cover"/>
+                <element inactive_on_update="false" label="Library Binding" sequence="70" value="Library_Binding"/>
+                <element inactive_on_update="false" label="Other" sequence="80" value="Other"/>
+                <element inactive_on_update="false" label="Pack" sequence="90" value="Pack"/>
+                <element inactive_on_update="false" label="Padded Hard Cover" sequence="100" value="Padded_Hard_Cover"/>
+                <element inactive_on_update="false" label="Paper Back" sequence="110" value="Paper_Back"/>
+                <element inactive_on_update="false" label="Spiral Bound" sequence="120" value="Spiral_Bound"/>
+                <element inactive_on_update="false" label="Toy" sequence="130" value="Toy"/>
+                <element inactive_on_update="false" label="VHS" sequence="140" value="VHS"/>
+            </choice>
+        </element>
+        <element choice="3" label="Category" mandatory="true" max_length="250" name="u_category" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Action" sequence="10" value="Action"/>
+                <element inactive_on_update="false" label="Adventure" sequence="20" value="Adventure"/>
+                <element inactive_on_update="false" label="Biography" sequence="30" value="Biography"/>
+                <element inactive_on_update="false" label="Cars" sequence="40" value="Cars"/>
+                <element inactive_on_update="false" label="Children" sequence="50" value="Children"/>
+                <element inactive_on_update="false" label="Computers" sequence="60" value="Computers"/>
+                <element inactive_on_update="false" label="Crafts" sequence="70" value="Crafts"/>
+                <element inactive_on_update="false" label="Culture" sequence="80" value="Culture"/>
+                <element inactive_on_update="false" label="Family" sequence="90" value="Family"/>
+                <element inactive_on_update="false" label="Games" sequence="100" value="Games"/>
+                <element inactive_on_update="false" label="How to" sequence="110" value="How to"/>
+                <element inactive_on_update="false" label="Literature" sequence="120" value="Literature"/>
+                <element inactive_on_update="false" label="Psychology" sequence="130" value="Psychology"/>
+            </choice>
+        </element>
+        <element label="Quantity" max_length="40" name="u_quantity" type="integer"/>
+        <element display="true" label="Title" mandatory="true" max_length="160" name="u_title" type="string"/>
+        <index name="index">
+            <element name="u_title"/>
+        </index>
+    </element>
+</database>
