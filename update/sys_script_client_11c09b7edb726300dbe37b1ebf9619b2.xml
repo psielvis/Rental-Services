@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>work_start</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>validate reserver from</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+	if (isLoading || newValue === '') {
+		return;
+	}
+	/*
+	if (oldValue == newValue){
+		return;
+	}
+ 	*/
+	//Type appropriate comment here, and begin script below
+	
+	g_form.clearMessages();
+	
+	var current_date = new Date();
+	var from_date = getDateFromFormat(newValue, g_user_date_time_format);
+		
+	if (from_date <current_date.getTime()){
+		g_form.addErrorMessage('Dates in the past as well as after the reserved to are not allowed. Please select a future date and remember that it needs to be before reserved to');
+		return false;
+	}
+	
+	if (g_form.getValue('work_end') != ''){
+		var to_date = getDateFromFormat(g_form.getValue('work_end'), g_user_date_time_format);
+		if (from_date > to_date){
+			g_form.addErrorMessage('Requested to cant be set before Requested from');
+			return false;
+		}
+	}
+		
+		// glideajax to check day of teh week as .getDay() method doesnt work here
+	 var ga = new GlideAjax('x_106032_rental_se.LibaryDateValidation');
+		ga.addParam('sysparm_name', 'checkDayOfTheWeek');
+		ga.addParam('sysparm_date', newValue);
+		ga.getXML(dateInfo);
+	
+	function dateInfo(response) {
+     var answer = response.responseXML.documentElement.getAttribute("answer");
+   //  console.log(answer);
+		var outcome = JSON.parse(answer);
+		if (outcome.day>5){
+			g_form.addErrorMessage('it cannot be set to Saturday or Sunday');
+		}
+		
+	}
+	/*no code below*/
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-01-08 16:19:44</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>11c09b7edb726300dbe37b1ebf9619b2</sys_id>
+        <sys_mod_count>43</sys_mod_count>
+        <sys_name>validate reserver from</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Rental Services" source="x_106032_rental_se">346306a6db322300dbe37b1ebf9619ee</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Rental Services">346306a6db322300dbe37b1ebf9619ee</sys_scope>
+        <sys_update_name>sys_script_client_11c09b7edb726300dbe37b1ebf9619b2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-01-09 13:53:18</sys_updated_on>
+        <table>x_106032_rental_se_rental_request</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_106032_rental_se.LibaryDateValidation</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>LibaryDateValidation</name>
+        <script><![CDATA[var LibaryDateValidation = Class.create();
+LibaryDateValidation.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	
+	checkDayOfTheWeek: function(){
+		var date = this.getParameter('sysparm_date');
+		var newDate = new GlideDate();
+		newDate.setValue(date);
+		
+		var result = '';
+		var check = {
+			"day": newDate.getDayOfWeekUTC()
+		};
+		result = new global.JSON().encode(check);
+		return result;
+		
+	},
+	
+	
+	type: 'LibaryDateValidation'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-01-09 10:17:05</sys_created_on>
+        <sys_id>62fff68fdb7e6300dbe37b1ebf961955</sys_id>
+        <sys_mod_count>28</sys_mod_count>
+        <sys_name>LibaryDateValidation</sys_name>
+        <sys_package display_value="Rental Services" source="x_106032_rental_se">346306a6db322300dbe37b1ebf9619ee</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Rental Services">346306a6db322300dbe37b1ebf9619ee</sys_scope>
+        <sys_update_name>sys_script_include_62fff68fdb7e6300dbe37b1ebf961955</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-01-09 13:53:58</sys_updated_on>
+    </sys_script_include>
+</record_update>
