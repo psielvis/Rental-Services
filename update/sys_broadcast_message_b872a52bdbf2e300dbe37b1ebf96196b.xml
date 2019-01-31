@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_broadcast_message">
+    <sys_broadcast_message action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <any_roled_user>true</any_roled_user>
+        <at_login>true</at_login>
+        <condition/>
+        <conditional>false</conditional>
+        <dc_sys_id/>
+        <email>false</email>
+        <email_sent>false</email_sent>
+        <logged_in>false</logged_in>
+        <message>hello there</message>
+        <name>Megaphone Broadcast Message</name>
+        <notify_users_after_date>2019-01-09 15:38:26</notify_users_after_date>
+        <notify_users_until_date>2999-01-31 15:38:31</notify_users_until_date>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek/>
+        <run_period/>
+        <run_start>2019-01-10 15:38:56</run_start>
+        <run_time/>
+        <run_type>once</run_type>
+        <script><![CDATA[var mega = new MegaphoneBroadcast(current.sys_id).broadcastMessage();]]></script>
+        <sys_class_name>sys_broadcast_message</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-01-10 15:38:51</sys_created_on>
+        <sys_id>b872a52bdbf2e300dbe37b1ebf96196b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>hello there</sys_name>
+        <sys_package display_value="Rental Services" source="x_106032_rental_se">346306a6db322300dbe37b1ebf9619ee</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Rental Services">346306a6db322300dbe37b1ebf9619ee</sys_scope>
+        <sys_update_name>sys_broadcast_message_b872a52bdbf2e300dbe37b1ebf96196b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-01-10 15:39:58</sys_updated_on>
+        <upgrade_safe>false</upgrade_safe>
+        <user_filter/>
+    </sys_broadcast_message>
+</record_update>

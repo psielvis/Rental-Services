@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_process_flow">
+    <sys_process_flow action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_106032_rental_se_rental_request">state=-5^EQ<item endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="-5"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <description/>
+        <label>Pending</label>
+        <name>Rental Process Flow</name>
+        <order>10</order>
+        <sys_class_name>sys_process_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-01-10 11:56:57</sys_created_on>
+        <sys_id>adcf206fdb32e300dbe37b1ebf961997</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Rental Process Flow</sys_name>
+        <sys_package display_value="Rental Services" source="x_106032_rental_se">346306a6db322300dbe37b1ebf9619ee</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Rental Services">346306a6db322300dbe37b1ebf9619ee</sys_scope>
+        <sys_update_name>sys_process_flow_adcf206fdb32e300dbe37b1ebf961997</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-01-10 12:45:07</sys_updated_on>
+        <table>x_106032_rental_se_rental_request</table>
+    </sys_process_flow>
+</record_update>
